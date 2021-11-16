@@ -1,0 +1,31 @@
+import java.util.HashMap;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] part = {"leo", "kiki", "eden"};
+		String[] comp = {"eden", "kiki"};
+//		main sol = new main();
+//		
+//		System.out.println(sol.solution(part, comp));
+		
+		HashMap<String, Integer> map = new HashMap();
+		map.put("a", 100);
+		map.put("b", 100);
+		map.put("c", 100);
+		System.out.println(map);
+	}
+	
+	public String solution(String[] participant, String[] completion) {
+		String answer = "";
+		
+		HashMap<String, Integer> map = new HashMap<>();
+		for(String player : participant) {
+			map.put(player, map.getOrDefault(player, 0)+1);
+		}
+		
+		
+		return answer;
+	}
+}

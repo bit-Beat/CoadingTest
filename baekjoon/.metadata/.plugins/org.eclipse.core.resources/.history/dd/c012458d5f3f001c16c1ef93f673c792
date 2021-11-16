@@ -1,0 +1,24 @@
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] keys = new String[56];
+		String[] values = new String[56];
+		StringBuilder html = new StringBuilder();
+		int cnt = 0;
+		
+		for(Object k : System.getProperties().keySet()) {
+			
+			String key = k.toString();
+			String value = System.getProperty(key);
+			System.out.println("key:"+key+"value:"+value);
+			keys[cnt] = key;
+			values[cnt] = value;
+			html.append("<th>"+keys[cnt]+"</th>\n"+"<td>"+values[cnt]+"</td>\n"+"<tr></tr>");
+//			System.out.println(cnt);
+			cnt+=1;
+		}
+	}
+
+}
